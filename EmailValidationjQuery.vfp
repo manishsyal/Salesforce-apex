@@ -1,0 +1,33 @@
+<apex:page standardController="Contact" docType="html-5.0" standardStylesheets="false" sidebar="false" showHeader="false">
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" />
+<apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"/>
+
+    <script type="text/javascript"> 
+              $('[id$=email]').rules("add",{
+                required: true,
+               email:true}                           
+            }); 
+    </script>
+
+    <head>
+        <title> Email Validation</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-area">
+                   <apex:form id="ContactForm">
+                    <div class="form-element">
+                     <table>
+                      <tr>
+                       <td > Email </td>
+                       <td > <apex:inputField value="{!Contact.email}"  html-placeHolder="Customer Email" id="email" /></td>
+                      </tr>
+                     </table>      
+                    </div>
+                    <apex:commandButton action="{!save}" value="Submit" id="submit" styleClass="submit" />
+                    
+                    </apex:form>
+            </div>
+        </div>
+    </body>
+</apex:page>

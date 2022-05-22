@@ -1,0 +1,5 @@
+.hover { background-color: rgba(0,0,0,0.1) !important; }
+.unselected { background-color: rgba(0,0,0,0.5); }
+.selected { background-color: none; }
+.grid-source { position: absolute; }
+.grid-overlay { position: relative; }
